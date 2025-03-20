@@ -6,6 +6,8 @@ import os
 from dotenv import load_dotenv
 import requests
 from routes import getRoute
+from destinations import destinations
+
 
 
 # if os.getenv("STREAMLIT_ENV") != "production":
@@ -15,6 +17,8 @@ load_dotenv()
 
 st.title("SnowStake")
 
-st.write("Time to Copper Mountain:", getRoute())
-
+for dests in destinations: 
+    st.write(f"{dests}:")
+    st.write(f"Time to:", getRoute(dests))
+    st.write("")
 
