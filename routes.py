@@ -21,7 +21,7 @@ headers = {
 homeCords = {"lat": 39.76894267994319, "long": -105.05439923229812}
 
 # this fucntion takes in one of the preset destinations, calls the google maps api, and returns the time to reach the destination 
-def getRoute(inputDestination):
+def getRouteTime(inputDestination):
     # acess the destinations dict with the key from the destination paramater
     location  = destinations[inputDestination]
     
@@ -43,7 +43,7 @@ def getRoute(inputDestination):
     time = data["routes"][0]["duration"] # access first routes time field 
     time = time[:-1] # time is returned as such: 12s, removing the s to convert to int
     time = convertTime(int(time))
-    return time
+    return f"Time to: {time}"
 
 # function to convert seconds to "normal" time
 def convertTime(seconds):

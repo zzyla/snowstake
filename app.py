@@ -5,8 +5,9 @@ import matplotlib.pyplot as plt
 import os
 from dotenv import load_dotenv
 import requests
-from routes import getRoute
+from routes import getRouteTime
 from destinations import destinations
+from weather import getCurrentWeather
 
 
 
@@ -19,6 +20,7 @@ st.title("SnowStake")
 
 for dests in destinations: 
     st.write(f"{dests}:")
-    st.write(f"Time to:", getRoute(dests))
+    st.write(getRouteTime(dests))
+    st.write(getCurrentWeather(dests))
     st.write("")
 
