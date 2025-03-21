@@ -49,22 +49,14 @@ def getCurrentWeather(inputDestination):
     
 
     # print(f"Current time {current.Time()}")
-
-    # print(f"Current temperature_2m {current_temperature_2m}")
-    # print(f"Current precipitation {current_precipitation}")
-    # print(f"Current wind_speed_10m {current_wind_speed_10m}")
-    # print(f"Current cloud_cover {current_cloud_cover}")
-    # print(f"Current wind_direction_10m {current_wind_direction_10m}")
-    # print(f"Current apparent_temperature {current_apparent_temperature}")
-    # print(f"Current snowfall {current_snowfall}")
     
     # output the results
     return f"""
-            Current Temp: {current_temperature_2m}\n
-            Current Feels Like Temp: {current_apparent_temperature}\n
-            Current Snowfall: {current_snowfall}\n 
-            Current Precip: {current_precipitation} \n 
-            Current Wind Speed: {current_wind_speed_10m}\n
+            Current Temp: {current_temperature_2m} F\n
+            Current Feels Like Temp: {current_apparent_temperature} F\n
+            Current Snowfall: {current_snowfall} in\n 
+            Current Precip: {current_precipitation} in\n 
+            Current Wind Speed: {current_wind_speed_10m} mph\n
             Current Cloud Cover: {current_cloud_cover}\n 
             Current Wind Direction: {current_wind_direction_10m}\n
             """
