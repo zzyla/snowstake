@@ -1,3 +1,0 @@
-from destinations import destinations
-
-
